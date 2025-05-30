@@ -1,0 +1,135 @@
+/* ===== 共通レイアウト・フォント ===== */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ===== ホーム画面 ===== */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+input, button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #357ac9;
+}
+
+/* ===== チャット画面 ===== */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.message-bubble {
+  max-width: 60%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  position: relative;
+  word-wrap: break-word;
+  background-color: #e0f7fa;
+}
+
+.message-bubble.self {
+  background-color: #c8e6c9;
+  align-self: flex-end;
+}
+
+.message-bubble.other {
+  background-color: #ffffff;
+  align-self: flex-start;
+}
+
+.read-status {
+  font-size: 10px;
+  color: gray;
+  position: absolute;
+  bottom: 2px;
+  left: 6px;
+}
+
+/* ===== 入力エリア ===== */
+.input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: white;
+}
+
+.input-area input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.input-area button {
+  margin-left: 10px;
+}
+
+/* ===== 管理画面 ===== */
+.admin-container {
+  padding: 20px;
+  background: #fff;
+}
+
+.log-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.log-entry {
+  border-bottom: 1px solid #eee;
+  padding: 4px 0;
+}
+
+.kicked {
+  color: red;
+  font-weight: bold;
+}
+
+.ban-button {
+  margin-left: 10px;
+  background-color: #f44336;
+  color: white;
+  padding: 2px 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ban-button:hover {
+  background-color: #d32f2f;
+}
