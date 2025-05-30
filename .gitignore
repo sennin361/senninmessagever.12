@@ -1,0 +1,24 @@
+# Node modules（パッケージ類）
+node_modules/
+
+# 環境変数ファイル（必要なら）
+.env
+
+# OSごとの一時ファイル
+.DS_Store
+Thumbs.db
+
+# npm log
+npm-debug.log*
+
+# PWAキャッシュなど一時ファイル
+public/service-worker.js.map
+public/*.cache
+
+# IDEの設定ファイル
+.vscode/
+.idea/
+
+# ビルド出力（使っている場合）
+dist/
+build/
