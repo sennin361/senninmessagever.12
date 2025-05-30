@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>仙人チャット</title>
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">
-    <div class="chat-header">仙人チャット</div>
-    <div id="chat-area" class="chat-area"></div>
-
-    <form id="chat-form">
-      <input type="text" id="chat-input" placeholder="メッセージを入力..." required />
-      <input type="file" id="file-input" accept="image/*,video/*" />
-      <button type="submit">送信</button>
-    </form>
-
-    <button id="leave-btn">退室</button>
+  <div class="home-container">
+    <h1>仙人チャット</h1>
+    <input id="nickname" type="text" placeholder="ニックネーム">
+    <input id="room" type="text" placeholder="あいことば">
+    <button onclick="enterChat()">入室</button>
+    <button onclick="goToAdmin()">管理画面</button>
   </div>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
-  <script src="/main.js"></script>
+  <script>
+    function enterChat() {
+      const nickname = document.getElementById('nickname').value;
+      const room = document.getElementById('room').value;
+      if (!nickname || !room) return alert('ニックネームとあいことばを入力してください');
+      localStorage.setItem('nickname', nickname);
+      localStorage.setItem('room', room);
+      window.location.href = 'chat.html';
+    }
+    function goToAdmin() {
+      window.location.href = 'admin.html';
+    }
+  </script>
 </body>
 </html>
