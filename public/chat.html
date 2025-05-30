@@ -1,0 +1,26 @@
+<!-- chat.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>仙人チャット - チャットルーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="chat-container">
+    <header>
+      <h2 id="room-name"></h2>
+      <button onclick="leaveRoom()">退室</button>
+    </header>
+    <div id="messages"></div>
+    <form id="message-form">
+      <input id="message-input" type="text" placeholder="メッセージを入力">
+      <input id="file-input" type="file" accept="image/*,video/*,audio/*">
+      <button type="submit">送信</button>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
